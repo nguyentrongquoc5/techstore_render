@@ -11,3 +11,11 @@ export default defineConfig({
     },
   },
 })
+
+
+// cd D:\techstore
+
+// git add -A
+// git status
+// git commit -m "Mô tả ngắn những gì đã sửa"
+// git push
