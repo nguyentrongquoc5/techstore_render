@@ -30,11 +30,11 @@ export default function DashboardPage() {
   const pieData = (data.ordersByStatus || []).map((x: any) => ({ name: statusLabel[x.status] || x.status, value: x.count }));
 
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen bg-yellow-100 p-6 space-y-6">
       <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((s) => (
-          <div key={s.label} className="bg-white rounded-xl border border-gray-100 p-5 flex items-center gap-4">
+          <div key={s.label} className="bg-yellow-50 rounded-xl border border-yellow-200 p-5 flex items-center gap-4">
             <div className={`w-12 h-12 ${s.color} rounded-xl flex items-center justify-center`}><s.icon size={22} className="text-white" /></div>
             <div>
               <p className="text-sm text-gray-500">{s.label}</p>
@@ -44,7 +44,7 @@ export default function DashboardPage() {
         ))}
       </div>
       <div className="grid lg:grid-cols-2 gap-6">
-        <div className="bg-white rounded-xl border border-gray-100 p-5">
+        <div className="bg-yellow-50 rounded-xl border border-yellow-200 p-5">
           <h3 className="font-semibold mb-4">Doanh thu theo tháng</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={data.revenueByMonth || []}>
